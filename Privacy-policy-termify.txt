@@ -1,0 +1,172 @@
+Privacy Policy
+
+Updated at 2026-01-21
+
+
+DoCo ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how your personal information is collected, used, and disclosed by DoCo.
+
+This Privacy Policy applies to our application, DoCo. By accessing or using our Service, you signify that you have read, understood, and agree to our collection, storage, use, and disclosure of your personal information as described in this Privacy Policy and our Terms of Service.
+
+Definitions and key terms
+
+To help explain things as clearly as possible in this Privacy Policy, every time any of these terms are referenced, are strictly defined as:
+
+  -Company: when this policy mentions "Company," "we," "us," or "our," it refers to DoCo, that is responsible for your information under this Privacy Policy.
+  -Country: where DoCo or the owners/founders of DoCo are based, in this case is Japan
+  -Device: any internet connected device such as a phone, tablet, computer or any other device that can be used to visit DoCo and use the services.
+  -Personal Data: any information that directly, indirectly, or in connection with other information — including a personal identification number — allows for the identification or identifiability of a natural person.
+  -Service: refers to the service provided by DoCo as described in the relative terms (if available) and on this platform.
+  -You: a person or entity that is registered with DoCo to use the Services.
+
+
+What Information Do We Collect?
+
+We collect information from you when you register on our app or fill out a form.
+
+  -Name / Username
+  -Email Addresses
+  -Location Data (for posting on map)
+
+We also collect information from mobile devices for a better user experience, although these features are completely optional:
+
+  -Camera (for taking photos for posts)
+  -Photo Library (for selecting photos for posts)
+  -Location Services (required for posting on the map)
+
+
+How Do We Use The Information We Collect?
+
+Any of the information we collect from you may be used in one of the following ways:
+
+  -To personalize your experience (your information helps us to better respond to your individual needs)
+  -To improve our app (we continually strive to improve our app offerings based on the information and feedback we receive from you)
+  -To improve customer service (your information helps us to more effectively respond to your customer service requests and support needs)
+  -To display your posts on the map at the location you specified
+
+
+When does DoCo use end user information from third parties?
+
+DoCo will collect End User Data necessary to provide the DoCo services to our customers.
+
+When you sign in using Apple Sign In, we receive your Apple ID, email address (or Apple's private relay email), and name (if provided). This information is used solely for account creation and authentication purposes.
+
+
+Do we share the information we collect with third parties?
+
+We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties. This does not include trusted third parties who assist us in operating our app, conducting our business, or servicing you, so long as those parties agree to keep this information confidential.
+
+We use Supabase as our backend service provider for authentication, database, and storage. Your data is stored securely on Supabase servers.
+
+We may also disclose personal and non-personal information about you to government or law enforcement officials or private parties as we, in our sole discretion, believe necessary or appropriate in order to respond to claims, legal process (including subpoenas), to protect our rights and interests or those of a third party, the safety of the public or any person, to prevent or stop any illegal, unethical, or legally actionable activity, or to otherwise comply with applicable court orders, laws, rules and regulations.
+
+
+How Long Do We Keep Your Information?
+
+We keep your information only so long as we need it to provide DoCo to you and fulfill the purposes described in this policy. This is also the case for anyone that we share your information with and who carries out services on our behalf. When we no longer need to use your information and there is no need for us to keep it to comply with our legal or regulatory obligations, we'll either remove it from our systems or depersonalize it so that we can't identify you.
+
+Posts on DoCo are automatically deleted after 24 hours.
+
+
+How Do We Protect Your Information?
+
+We implement a variety of security measures to maintain the safety of your personal information when you enter, submit, or access your personal information. We use secure servers and all data transmission is encrypted via SSL/TLS technology. We cannot, however, ensure or warrant the absolute security of any information you transmit to DoCo or guarantee that your information on the Service may not be accessed, disclosed, altered, or destroyed by a breach of any of our physical, technical, or managerial safeguards.
+
+
+Could my information be transferred to other countries?
+
+DoCo is incorporated in Japan. Information collected via our app, through direct interactions with you, or from use of our help services may be transferred from time to time to our offices or personnel, or to third parties, located throughout the world, and may be viewed and hosted anywhere in the world, including countries that may not have laws of general applicability regulating the use and transfer of such data. To the fullest extent allowed by applicable law, by using any of the above, you voluntarily consent to the trans-border transfer and hosting of such information.
+
+
+Can I update or correct my information?
+
+You have the right to request updates or corrections to your information. You can:
+
+  -Update your profile information directly in the app
+  -Delete your account through Settings > Account Settings > Delete Account
+  -Contact us to request deletion of your data
+
+When you delete your account, all your personal data and posts will be permanently removed from our systems.
+
+
+Governing Law
+
+This Privacy Policy is governed by the laws of Japan without regard to its conflict of laws provision. You consent to the exclusive jurisdiction of the courts in connection with any action or dispute arising between the parties under or in connection with this Privacy Policy.
+
+By using DoCo or contacting us directly, you signify your acceptance of this Privacy Policy. If you do not agree to this Privacy Policy, you should not use our services. Continued use of the app, direct engagement with us, or following the posting of changes to this Privacy Policy that do not significantly affect the use or disclosure of your personal information will mean that you accept those changes.
+
+
+Your Consent
+
+By using our app or registering an account, you hereby consent to our Privacy Policy and agree to its terms.
+
+
+Kids' Privacy
+
+We do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.
+
+
+Changes To Our Privacy Policy
+
+We may change our Service and policies, and we may need to make changes to this Privacy Policy so that they accurately reflect our Service and policies. Unless otherwise required by law, we will notify you (for example, through our Service) before we make changes to this Privacy Policy and give you an opportunity to review them before they go into effect. Then, if you continue to use the Service, you will be bound by the updated Privacy Policy. If you do not want to agree to this or any updated Privacy Policy, you can delete your account.
+
+
+Third-Party Services
+
+We use the following third-party services:
+
+  -Apple Sign In: For user authentication
+  -Supabase: For backend services (authentication, database, storage)
+  -Apple MapKit: For displaying the map
+
+These services have their own privacy policies, and we encourage you to review them.
+
+
+Information about General Data Protection Regulation (GDPR)
+
+We may be collecting and using information from you if you are from the European Economic Area (EEA), and in this section of our Privacy Policy we are going to explain exactly how and why is this data collected, and how we maintain this data under protection from being replicated or used in the wrong way.
+
+
+What is GDPR?
+
+GDPR is an EU-wide privacy and data protection law that regulates how EU residents' data is protected by companies and enhances the control the EU residents have, over their personal data.
+
+
+The Data Protection Principles include requirements such as:
+
+  -Personal data collected must be processed in a fair, legal, and transparent way and should only be used in a way that a person would reasonably expect.
+  -Personal data should only be collected to fulfil a specific purpose and it should only be used for that purpose. Organizations must specify why they need the personal data when they collect it.
+  -Personal data should be held no longer than necessary to fulfil its purpose.
+  -People covered by the GDPR have the right to access their own personal data. They can also request a copy of their data, and that their data be updated, deleted, restricted, or moved to another organization.
+
+
+Individual Data Subject's Rights - Data Access, Portability and Deletion
+
+We are committed to helping our customers meet the data subject rights requirements of GDPR. DoCo processes or stores all personal data in fully vetted, compliant vendors. We dispose of all data when your account is deleted.
+
+You have the right to:
+  -Access your personal data
+  -Request correction of your personal data
+  -Request deletion of your personal data
+  -Export your personal data
+
+
+California Residents
+
+The California Consumer Privacy Act (CCPA) requires us to disclose categories of Personal Information we collect and how we use it, the categories of sources from whom we collect Personal Information, and the third parties with whom we share it, which we have explained above.
+
+You may exercise the following rights:
+
+  -Right to Know and Access. You may submit a verifiable request for information regarding the: (1) categories of Personal Information we collect, use, or share; (2) purposes for which categories of Personal Information are collected or used by us; (3) categories of sources from which we collect Personal Information; and (4) specific pieces of Personal Information we have collected about you.
+  -Right to Equal Service. We will not discriminate against you if you exercise your privacy rights.
+  -Right to Delete. You may submit a verifiable request to close your account and we will delete Personal Information about you that we have collected.
+
+If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.
+
+We do not sell the Personal Information of our users.
+
+
+Contact Us
+
+Don't hesitate to contact us if you have any questions.
+
+  -Via Email: docoappdirect@gmail.com
