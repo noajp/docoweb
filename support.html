@@ -86,73 +86,49 @@
         color: #999999;
       }
 
-      /* Contact Form */
+      /* Contact Section */
       .contact-section {
-        max-width: 800px;
+        max-width: 600px;
         margin: 0 auto 80px;
         background: rgba(255, 255, 255, 0.05);
-        padding: 40px;
+        padding: 50px 40px;
         border-radius: 20px;
         border: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
       }
 
       .contact-section h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+
+      .contact-section p {
+        font-size: 1.1rem;
+        color: #999999;
         margin-bottom: 30px;
       }
 
-      .form-group {
-        margin-bottom: 25px;
-      }
-
-      .form-group label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: 600;
-        color: #ffffff;
-      }
-
-      .form-group input,
-      .form-group textarea {
-        width: 100%;
-        padding: 12px 16px;
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 8px;
-        color: #ffffff;
-        font-size: 1rem;
-        font-family: inherit;
-        transition: all 0.3s;
-      }
-
-      .form-group input:focus,
-      .form-group textarea:focus {
-        outline: none;
-        border-color: #ffffff;
-        background: rgba(255, 255, 255, 0.15);
-      }
-
-      .form-group textarea {
-        min-height: 150px;
-        resize: vertical;
-      }
-
-      .submit-btn {
-        width: 100%;
-        padding: 15px;
+      .email-link {
+        display: inline-block;
+        padding: 18px 40px;
         background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
         color: #ffffff;
-        border: none;
-        border-radius: 8px;
-        font-size: 1.1rem;
+        text-decoration: none;
+        border-radius: 50px;
+        font-size: 1.2rem;
         font-weight: 600;
-        cursor: pointer;
         transition: all 0.3s;
       }
 
-      .submit-btn:hover {
+      .email-link:hover {
         transform: translateY(-2px);
         box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+      }
+
+      .email-text {
+        margin-top: 20px;
+        font-size: 0.95rem;
+        color: #666666;
       }
 
       /* Footer */
@@ -198,7 +174,12 @@
         }
 
         .contact-section {
-          padding: 30px 20px;
+          padding: 40px 20px;
+        }
+
+        .email-link {
+          padding: 15px 30px;
+          font-size: 1rem;
         }
 
         .footer-content {
@@ -229,32 +210,11 @@
           <p>Have questions? We're here to help!</p>
         </div>
 
-        <!-- Contact Form -->
         <div class="contact-section">
           <h2>Contact Us</h2>
-          <form id="contactForm">
-            <div class="form-group">
-              <label for="name">Name *</label>
-              <input type="text" id="name" name="name" required placeholder="Your name">
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" required placeholder="example@email.com">
-            </div>
-
-            <div class="form-group">
-              <label for="subject">Subject *</label>
-              <input type="text" id="subject" name="subject" required placeholder="Subject of your inquiry">
-            </div>
-
-            <div class="form-group">
-              <label for="message">Message *</label>
-              <textarea id="message" name="message" required placeholder="Please describe your inquiry"></textarea>
-            </div>
-
-            <button type="submit" class="submit-btn">Send Message</button>
-          </form>
+          <p>For any questions, feedback, or support requests, please send us an email.</p>
+          <a href="mailto:docoappdirect@gmail.com" class="email-link">docoappdirect@gmail.com</a>
+          <p class="email-text">We typically respond within 24-48 hours.</p>
         </div>
       </div>
     </main>
@@ -271,25 +231,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-
-        // Create mailto link to docoappdirect@gmail.com
-        const mailtoLink = `mailto:docoappdirect@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message)}`;
-
-        // Open mail client
-        window.location.href = mailtoLink;
-
-        // Show confirmation
-        alert('Opening your email client to send the message...');
-      });
-    </script>
   </body>
 </html>
