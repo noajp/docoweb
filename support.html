@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
   <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -155,71 +155,6 @@
                         box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
               }
 
-              /* FAQ Section */
-              .faq-section {
-                        max-width: 900px;
-                        margin: 0 auto;
-              }
-
-              .faq-section h2 {
-                        font-size: 2.5rem;
-                        margin-bottom: 40px;
-                        text-align: center;
-              }
-
-              .faq-item {
-                        background: rgba(255, 255, 255, 0.05);
-                        border: 1px solid rgba(255, 255, 255, 0.1);
-                        border-radius: 12px;
-                        margin-bottom: 20px;
-                        overflow: hidden;
-                        transition: all 0.3s;
-              }
-
-              .faq-item:hover {
-                        border-color: rgba(255, 255, 255, 0.2);
-              }
-
-              .faq-question {
-                        padding: 20px 25px;
-                        cursor: pointer;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        font-weight: 600;
-                        font-size: 1.1rem;
-                        transition: all 0.3s;
-              }
-
-              .faq-question:hover {
-                        background: rgba(255, 255, 255, 0.08);
-              }
-
-              .faq-icon {
-                        font-size: 1.5rem;
-                        transition: transform 0.3s;
-              }
-
-              .faq-item.active .faq-icon {
-                        transform: rotate(180deg);
-              }
-
-              .faq-answer {
-                        max-height: 0;
-                        overflow: hidden;
-                        transition: max-height 0.3s ease-out;
-              }
-
-              .faq-answer-content {
-                        padding: 0 25px 20px;
-                        color: #cccccc;
-                        line-height: 1.8;
-              }
-
-              .faq-item.active .faq-answer {
-                        max-height: 500px;
-              }
-
               /* Footer */
               footer {
                         padding: 40px;
@@ -290,113 +225,36 @@
         <main>
                 <div class="container">
                           <div class="support-header">
-                                      <h1>サポート</h1>
-                                    <p>お困りのことがございましたら、お気軽にお問い合わせください</p>
+                                      <h1>Support</h1>
+                                    <p>Have questions? We're here to help!</p>
                           </div>div>
                 
                         <!-- Contact Form -->
                         <div class="contact-section">
-                                  <h2>お問い合わせフォーム</h2>
+                                  <h2>Contact Us</h2>
                                   <form id="contactForm">
                                               <div class="form-group">
-                                                            <label for="name">お名前 *</label>label>
+                                                            <label for="name">Name *</label>label>
                                                             <input type="text" id="name" name="name" required>
                                               </div>div>
                                               
                                               <div class="form-group">
-                                                            <label for="email">メールアドレス *</label>label>
+                                                            <label for="email">Email Address *</label>label>
                                                             <input type="email" id="email" name="email" required>
                                               </div>div>
                                               
                                               <div class="form-group">
-                                                            <label for="subject">件名 *</label>label>
+                                                            <label for="subject">Subject *</label>label>
                                                             <input type="text" id="subject" name="subject" required>
                                               </div>div>
                                               
                                               <div class="form-group">
-                                                            <label for="message">メッセージ *</label>label>
+                                                            <label for="message">Message *</label>label>
                                                             <textarea id="message" name="message" required></textarea>
                                               </div>div>
                                               
-                                              <button type="submit" class="submit-btn">送信する</button>button>
+                                              <button type="submit" class="submit-btn">Send Message</button>button>
                                   </form>form>
-                        </div>div>
-                
-                        <!-- FAQ Section -->
-                        <div class="faq-section">
-                                  <h2>よくある質問（FAQ）</h2>
-                                  
-                                  <div class="faq-item">
-                                              <div class="faq-question">
-                                                            <span>DoCoの使い方を教えてください</span>
-                                                            <span class="faq-icon">▼</span>
-                                              </div>div>
-                                              <div class="faq-answer">
-                                                            <div class="faq-answer-content">
-                                                                            DoCoは地図上に思い出や写真を投稿できるアプリです。アプリをダウンロード後、位置情報を有効にして、訪れた場所でテキストや写真を投稿してください。3Dマップ上で他のユーザーの投稿も見ることができます。
-                                                            </div>div>
-                                              </div>div>
-                                  </div>div>
-                        
-                                  <div class="faq-item">
-                                              <div class="faq-question">
-                                                            <span>アカウントの登録方法は？</span>
-                                                            <span class="faq-icon">▼</span>
-                                              </div>div>
-                                              <div class="faq-answer">
-                                                            <div class="faq-answer-content">
-                                                                            アプリをダウンロードして起動すると、メールアドレスまたはSNSアカウントで簡単に登録できます。登録後すぐにDoCoの機能をお使いいただけます。
-                                                            </div>div>
-                                              </div>div>
-                                  </div>div>
-                        
-                                  <div class="faq-item">
-                                              <div class="faq-question">
-                                                            <span>投稿を削除することはできますか？</span>
-                                                            <span class="faq-icon">▼</span>
-                                              </div>div>
-                                              <div class="faq-answer">
-                                                            <div class="faq-answer-content">
-                                                                            はい、できます。自分の投稿を開いて、右上のメニューから「削除」を選択してください。削除した投稿は復元できませんのでご注意ください。
-                                                            </div>div>
-                                              </div>div>
-                                  </div>div>
-                        
-                                  <div class="faq-item">
-                                              <div class="faq-question">
-                                                            <span>プライバシー設定はどこで変更できますか？</span>
-                                                            <span class="faq-icon">▼</span>
-                                              </div>div>
-                                              <div class="faq-answer">
-                                                            <div class="faq-answer-content">
-                                                                            アプリの設定メニューから「プライバシー設定」を選択してください。投稿の公開範囲や位置情報の共有設定などをカスタマイズできます。
-                                                            </div>div>
-                                              </div>div>
-                                  </div>div>
-                        
-                                  <div class="faq-item">
-                                              <div class="faq-question">
-                                                            <span>位置情報はどのように扱われますか？</span>
-                                                            <span class="faq-icon">▼</span>
-                                              </div>div>
-                                              <div class="faq-answer">
-                                                            <div class="faq-answer-content">
-                                                                            位置情報は投稿に関連付けられますが、正確な住所ではなく地域レベルで表示されます。プライバシー設定で位置情報の共有レベルを調整できます。詳しくは<a href="privacy-policy.html" style="color: #FF6B35;">プライバシーポリシー</a>a>をご確認ください。
-                                                            </div>div>
-                                              </div>div>
-                                  </div>div>
-                        
-                                  <div class="faq-item">
-                                              <div class="faq-question">
-                                                            <span>問題を報告したい場合はどうすればいいですか？</span>
-                                                            <span class="faq-icon">▼</span>
-                                              </div>div>
-                                              <div class="faq-answer">
-                                                            <div class="faq-answer-content">
-                                                                            上記のお問い合わせフォームから詳細をご連絡ください。または、直接<a href="mailto:docoappdirect@gmail.com" style="color: #FF6B35;">docoappdirect@gmail.com</a>a>までメールでご連絡いただけます。
-                                                            </div>div>
-                                              </div>div>
-                                  </div>div>
                         </div>div>
                 </div>div>
         </main>
@@ -404,7 +262,7 @@
       <footer>
               <div class="footer-content">
                         <div class="footer-left">
-                                    <span class="copyright">© 2026 DoCo</span>
+                                    <span class="copyright">© 2026 DoCo</span>span>
                         </div>div>
                         <div class="footer-links">
                                     <a href="privacy-policy.html">Privacy Policy</a>a>
@@ -415,24 +273,6 @@
       </footer>
 
         <script>
-                // FAQ accordion functionality
-                document.querySelectorAll('.faq-question').forEach(question => {
-                          question.addEventListener('click', () => {
-                                      const faqItem = question.parentElement;
-                                      const isActive = faqItem.classList.contains('active');
-
-                                      // Close all other FAQ items
-                                      document.querySelectorAll('.faq-item').forEach(item => {
-                                                    item.classList.remove('active');
-                                      });
-
-                                      // Toggle current item
-                                      if (!isActive) {
-                                                    faqItem.classList.add('active');
-                                      }
-                          });
-                });
-
                 // Contact form submission
                 document.getElementById('contactForm').addEventListener('submit', function(e) {
                           e.preventDefault();
@@ -443,19 +283,19 @@
                           const message = document.getElementById('message').value;
 
                           // Create mailto link
-                          const mailtoLink = `mailto:docoappdirect@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('名前: ' + name + '\nメールアドレス: ' + email + '\n\nメッセージ:\n' + message)}`;
+                          const mailtoLink = `mailto:docoappdirect@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message)}`;
 
                           // Open mail client
                           window.location.href = mailtoLink;
 
                           // Show confirmation
-                          alert('メールアプリケーションが開きます。送信を完了してください。');
+                          alert('Opening your email client to send the message...');
                 });
         </script>
   </body>
 </html>html>
         </script>
-      </footer></span></span></p></h1>
+      </footer></p></h1>
         </main>
         </header>
   </body>
