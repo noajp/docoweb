@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Support - DoCo</title>
+      <style>
+              * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+              }
+
+              body {
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+                        background-color: #000000;
+                        min-height: 100vh;
+                        color: #ffffff;
+                        overflow-x: hidden;
+              }
+
+              .container {
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        padding: 0 40px;
+              }
+
+              /* Header */
+              header {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 20px 40px;
+              }
+
+              .logo {
+                        font-size: 1.8rem;
+                        font-weight: 700;
+                        color: #ffffff;
+                        text-decoration: none;
+              }
+
+              .nav-buttons {
+                        display: flex;
+                        gap: 12px;
+              }
+
+              .nav-btn {
+                        padding: 12px 24px;
+                        border-radius: 50px;
+                        font-size: 0.95rem;
+                        font-weight: 600;
+                        text-decoration: none;
+                        transition: all 0.2s;
+              }
+
+              .nav-btn-light {
+                        background-color: #ffffff;
+                        color: #000000;
+              }
+
+              .nav-btn-light:hover {
+                        background-color: #f0f0f0;
+              }
+
+              /* Main Content */
+              main {
+                        padding: 60px 40px;
+              }
+
+              .support-header {
+                        text-align: center;
+                        margin-bottom: 60px;
+              }
+
+              .support-header h1 {
+                        font-size: 3rem;
+                        margin-bottom: 20px;
+                        background: linear-gradient(135deg, #ffffff 0%, #999999 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+              }
+
+              .support-header p {
+                        font-size: 1.2rem;
+                        color: #999999;
+              }
+
+              /* Contact Form */
+              .contact-section {
+                        max-width: 800px;
+                        margin: 0 auto 80px;
+                        background: rgba(255, 255, 255, 0.05);
+                        padding: 40px;
+                        border-radius: 20px;
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+              }
+
+              .contact-section h2 {
+                        font-size: 2rem;
+                        margin-bottom: 30px;
+              }
+
+              .form-group {
+                        margin-bottom: 25px;
+              }
+
+              .form-group label {
+                        display: block;
+                        margin-bottom: 8px;
+                        font-weight: 600;
+                        color: #ffffff;
+              }
+
+              .form-group input,
+              .form-group textarea {
+                        width: 100%;
+                        padding: 12px 16px;
+                        background: rgba(255, 255, 255, 0.1);
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+                        border-radius: 8px;
+                        color: #ffffff;
+                        font-size: 1rem;
+                        font-family: inherit;
+                        transition: all 0.3s;
+              }
+
+              .form-group input:focus,
+              .form-group textarea:focus {
+                        outline: none;
+                        border-color: #ffffff;
+                        background: rgba(255, 255, 255, 0.15);
+              }
+
+              .form-group textarea {
+                        min-height: 150px;
+                        resize: vertical;
+              }
+
+              .submit-btn {
+                        width: 100%;
+                        padding: 15px;
+                        background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+                        color: #ffffff;
+                        border: none;
+                        border-radius: 8px;
+                        font-size: 1.1rem;
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: all 0.3s;
+              }
+
+              .submit-btn:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+              }
+
+              /* FAQ Section */
+              .faq-section {
+                        max-width: 900px;
+                        margin: 0 auto;
+              }
+
+              .faq-section h2 {
+                        font-size: 2.5rem;
+                        margin-bottom: 40px;
+                        text-align: center;
+              }
+
+              .faq-item {
+                        background: rgba(255, 255, 255, 0.05);
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        border-radius: 12px;
+                        margin-bottom: 20px;
+                        overflow: hidden;
+                        transition: all 0.3s;
+              }
+
+              .faq-item:hover {
+                        border-color: rgba(255, 255, 255, 0.2);
+              }
+
+              .faq-question {
+                        padding: 20px 25px;
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        font-weight: 600;
+                        font-size: 1.1rem;
+                        transition: all 0.3s;
+              }
+
+              .faq-question:hover {
+                        background: rgba(255, 255, 255, 0.08);
+              }
+
+              .faq-icon {
+                        font-size: 1.5rem;
+                        transition: transform 0.3s;
+              }
+
+              .faq-item.active .faq-icon {
+                        transform: rotate(180deg);
+              }
+
+              .faq-answer {
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.3s ease-out;
+              }
+
+              .faq-answer-content {
+                        padding: 0 25px 20px;
+                        color: #cccccc;
+                        line-height: 1.8;
+              }
+
+              .faq-item.active .faq-answer {
+                        max-height: 500px;
+              }
+
+              /* Footer */
+              footer {
+                        padding: 40px;
+                        border-top: 1px solid rgba(255, 255, 255, 0.1);
+                        margin-top: 80px;
+              }
+
+              .footer-content {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        max-width: 1400px;
+                        margin: 0 auto;
+              }
+
+              .copyright {
+                        color: #666666;
+                        font-size: 0.9rem;
+              }
+
+              .footer-links {
+                        display: flex;
+                        gap: 30px;
+              }
+
+              .footer-links a {
+                        color: #999999;
+                        text-decoration: none;
+                        font-size: 0.9rem;
+                        transition: color 0.2s;
+              }
+
+              .footer-links a:hover {
+                        color: #ffffff;
+              }
+
+              /* Responsive */
+              @media (max-width: 768px) {
+                        .support-header h1 {
+                                    font-size: 2rem;
+                        }
+
+                        .contact-section {
+                                    padding: 30px 20px;
+                        }
+
+                        .footer-content {
+                                    flex-direction: column;
+                                    gap: 20px;
+                                    text-align: center;
+                        }
+
+                        .footer-links {
+                                    flex-direction: column;
+                                    gap: 15px;
+                        }
+              }
+            </style>
+  </head>
+  <body>
+        <header>
+                <a href="index.html" class="logo">DoCo</a>a>
+                <div class="nav-buttons">
+                          <a href="#" class="nav-btn nav-btn-light">Get the App</a>a>
+                </div>div>
+        </header>
+
+        <main>
+                <div class="container">
+                          <div class="support-header">
+                                      <h1>サポート</h1>
+                                    <p>お困りのことがございましたら、お気軽にお問い合わせください</p>
+                          </div>div>
+                
+                        <!-- Contact Form -->
+                        <div class="contact-section">
+                                  <h2>お問い合わせフォーム</h2>
+                                  <form id="contactForm">
+                                              <div class="form-group">
+                                                            <label for="name">お名前 *</label>label>
+                                                            <input type="text" id="name" name="name" required>
+                                              </div>div>
+                                              
+                                              <div class="form-group">
+                                                            <label for="email">メールアドレス *</label>label>
+                                                            <input type="email" id="email" name="email" required>
+                                              </div>div>
+                                              
+                                              <div class="form-group">
+                                                            <label for="subject">件名 *</label>label>
+                                                            <input type="text" id="subject" name="subject" required>
+                                              </div>div>
+                                              
+                                              <div class="form-group">
+                                                            <label for="message">メッセージ *</label>label>
+                                                            <textarea id="message" name="message" required></textarea>
+                                              </div>div>
+                                              
+                                              <button type="submit" class="submit-btn">送信する</button>button>
+                                  </form>form>
+                        </div>div>
+                
+                        <!-- FAQ Section -->
+                        <div class="faq-section">
+                                  <h2>よくある質問（FAQ）</h2>
+                                  
+                                  <div class="faq-item">
+                                              <div class="faq-question">
+                                                            <span>DoCoの使い方を教えてください</span>
+                                                            <span class="faq-icon">▼</span>
+                                              </div>div>
+                                              <div class="faq-answer">
+                                                            <div class="faq-answer-content">
+                                                                            DoCoは地図上に思い出や写真を投稿できるアプリです。アプリをダウンロード後、位置情報を有効にして、訪れた場所でテキストや写真を投稿してください。3Dマップ上で他のユーザーの投稿も見ることができます。
+                                                            </div>div>
+                                              </div>div>
+                                  </div>div>
+                        
+                                  <div class="faq-item">
+                                              <div class="faq-question">
+                                                            <span>アカウントの登録方法は？</span>
+                                                            <span class="faq-icon">▼</span>
+                                              </div>div>
+                                              <div class="faq-answer">
+                                                            <div class="faq-answer-content">
+                                                                            アプリをダウンロードして起動すると、メールアドレスまたはSNSアカウントで簡単に登録できます。登録後すぐにDoCoの機能をお使いいただけます。
+                                                            </div>div>
+                                              </div>div>
+                                  </div>div>
+                        
+                                  <div class="faq-item">
+                                              <div class="faq-question">
+                                                            <span>投稿を削除することはできますか？</span>
+                                                            <span class="faq-icon">▼</span>
+                                              </div>div>
+                                              <div class="faq-answer">
+                                                            <div class="faq-answer-content">
+                                                                            はい、できます。自分の投稿を開いて、右上のメニューから「削除」を選択してください。削除した投稿は復元できませんのでご注意ください。
+                                                            </div>div>
+                                              </div>div>
+                                  </div>div>
+                        
+                                  <div class="faq-item">
+                                              <div class="faq-question">
+                                                            <span>プライバシー設定はどこで変更できますか？</span>
+                                                            <span class="faq-icon">▼</span>
+                                              </div>div>
+                                              <div class="faq-answer">
+                                                            <div class="faq-answer-content">
+                                                                            アプリの設定メニューから「プライバシー設定」を選択してください。投稿の公開範囲や位置情報の共有設定などをカスタマイズできます。
+                                                            </div>div>
+                                              </div>div>
+                                  </div>div>
+                        
+                                  <div class="faq-item">
+                                              <div class="faq-question">
+                                                            <span>位置情報はどのように扱われますか？</span>
+                                                            <span class="faq-icon">▼</span>
+                                              </div>div>
+                                              <div class="faq-answer">
+                                                            <div class="faq-answer-content">
+                                                                            位置情報は投稿に関連付けられますが、正確な住所ではなく地域レベルで表示されます。プライバシー設定で位置情報の共有レベルを調整できます。詳しくは<a href="privacy-policy.html" style="color: #FF6B35;">プライバシーポリシー</a>a>をご確認ください。
+                                                            </div>div>
+                                              </div>div>
+                                  </div>div>
+                        
+                                  <div class="faq-item">
+                                              <div class="faq-question">
+                                                            <span>問題を報告したい場合はどうすればいいですか？</span>
+                                                            <span class="faq-icon">▼</span>
+                                              </div>div>
+                                              <div class="faq-answer">
+                                                            <div class="faq-answer-content">
+                                                                            上記のお問い合わせフォームから詳細をご連絡ください。または、直接<a href="mailto:docoappdirect@gmail.com" style="color: #FF6B35;">docoappdirect@gmail.com</a>a>までメールでご連絡いただけます。
+                                                            </div>div>
+                                              </div>div>
+                                  </div>div>
+                        </div>div>
+                </div>div>
+        </main>
+  
+      <footer>
+              <div class="footer-content">
+                        <div class="footer-left">
+                                    <span class="copyright">© 2026 DoCo</span>
+                        </div>div>
+                        <div class="footer-links">
+                                    <a href="privacy-policy.html">Privacy Policy</a>a>
+                                    <a href="#">Terms</a>a>
+                                    <a href="support.html">Support</a>a>
+                        </div>div>
+              </div>div>
+      </footer>
+
+        <script>
+                // FAQ accordion functionality
+                document.querySelectorAll('.faq-question').forEach(question => {
+                          question.addEventListener('click', () => {
+                                      const faqItem = question.parentElement;
+                                      const isActive = faqItem.classList.contains('active');
+
+                                      // Close all other FAQ items
+                                      document.querySelectorAll('.faq-item').forEach(item => {
+                                                    item.classList.remove('active');
+                                      });
+
+                                      // Toggle current item
+                                      if (!isActive) {
+                                                    faqItem.classList.add('active');
+                                      }
+                          });
+                });
+
+                // Contact form submission
+                document.getElementById('contactForm').addEventListener('submit', function(e) {
+                          e.preventDefault();
+
+                          const name = document.getElementById('name').value;
+                          const email = document.getElementById('email').value;
+                          const subject = document.getElementById('subject').value;
+                          const message = document.getElementById('message').value;
+
+                          // Create mailto link
+                          const mailtoLink = `mailto:docoappdirect@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('名前: ' + name + '\nメールアドレス: ' + email + '\n\nメッセージ:\n' + message)}`;
+
+                          // Open mail client
+                          window.location.href = mailtoLink;
+
+                          // Show confirmation
+                          alert('メールアプリケーションが開きます。送信を完了してください。');
+                });
+        </script>
+  </body>
+</html>html>
+        </script>
+      </footer></span></span></p></h1>
+        </main>
+        </header>
+  </body>
+      </style></title>
+  </head>
