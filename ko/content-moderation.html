@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콘텐츠 정책 - DoCo</title>
+    <link rel="alternate" hreflang="en" href="https://noajp.github.io/docoweb/content-moderation.html">
+    <link rel="alternate" hreflang="ja" href="https://noajp.github.io/docoweb/ja/content-moderation.html">
+    <link rel="alternate" hreflang="ko" href="https://noajp.github.io/docoweb/ko/content-moderation.html">
+    <link rel="alternate" hreflang="fr" href="https://noajp.github.io/docoweb/fr/content-moderation.html">
+    <link rel="alternate" hreflang="es" href="https://noajp.github.io/docoweb/es/content-moderation.html">
+    <link rel="alternate" hreflang="x-default" href="https://noajp.github.io/docoweb/content-moderation.html">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; background-color: #000; color: #fff; line-height: 1.7; }
+      header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid #1a1a1a; }
+      .logo { font-size: 1.8rem; font-weight: 700; color: #fff; text-decoration: none; }
+      .header-actions { display: flex; gap: 12px; align-items: center; }
+      .lang-switcher { position: relative; display: inline-flex; align-items: center; }
+      .lang-switcher select { appearance: none; -webkit-appearance: none; background-color: #1a1a1a; color: #fff; border: 1px solid #2a2a2a; border-radius: 50px; padding: 10px 36px 10px 36px; font-size: 0.9rem; font-family: inherit; cursor: pointer; transition: background-color 0.2s; }
+      .lang-switcher select:hover { background-color: #2a2a2a; }
+      .lang-switcher::before { content: "\1F310"; position: absolute; left: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 0.85rem; }
+      .lang-switcher::after { content: "\25BC"; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 0.65rem; color: #888; }
+      .back-link { padding: 10px 20px; background-color: #1a1a1a; color: #fff; text-decoration: none; border-radius: 50px; font-size: 0.9rem; transition: background-color 0.2s; }
+      .back-link:hover { background-color: #333; }
+      .container { max-width: 800px; margin: 0 auto; padding: 40px 60px 80px; }
+      h1 { font-size: 2.5rem; margin-bottom: 10px; }
+      .updated { color: #888; margin-bottom: 30px; font-size: 0.95rem; }
+      .notice { background-color: #0d0d0d; border: 1px solid #1f1f1f; border-radius: 8px; padding: 14px 18px; margin-bottom: 30px; color: #aaa; font-size: 0.9rem; }
+      h2 { font-size: 1.4rem; margin-top: 35px; margin-bottom: 12px; color: #fff; }
+      p, ul, ol { margin-bottom: 15px; color: #ddd; }
+      ul, ol { margin-left: 20px; }
+      li { margin-bottom: 6px; }
+      a { color: #4a9eff; }
+      strong { color: #fff; }
+      .category { border-radius: 10px; padding: 16px 20px; margin-bottom: 14px; background-color: #0d0d0d; border: 1px solid #1f1f1f; }
+      .category .label { display: flex; align-items: center; gap: 10px; font-weight: 600; margin-bottom: 10px; color: #fff; }
+      .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
+      .dot-red { background: #ff453a; }
+      .dot-orange { background: #ff9f0a; }
+      .dot-yellow { background: #ffd60a; }
+      .category ul { margin-left: 22px; margin-bottom: 0; }
+      .category li { color: #bbb; }
+      footer { padding: 30px 40px; border-top: 1px solid #222; margin-top: 60px; }
+      .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; max-width: 1400px; margin: 0 auto; gap: 20px; }
+      .copyright { color: #888; font-size: 0.9rem; }
+      .footer-links { display: flex; gap: 25px; flex-wrap: wrap; }
+      .footer-links a { color: #888; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+      .footer-links a:hover { color: #fff; }
+      @media (max-width: 640px) {
+        header { padding: 15px 20px; flex-wrap: wrap; gap: 10px; }
+        .logo { font-size: 1.4rem; }
+        h1 { font-size: 2rem; }
+        h2 { font-size: 1.2rem; }
+        .container { padding: 30px 20px 60px; }
+        .footer-content { flex-direction: column; text-align: center; }
+        .footer-links { justify-content: center; }
+        .lang-switcher select { padding: 8px 30px 8px 32px; font-size: 0.85rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">DoCo</a>
+      <div class="header-actions">
+        <div class="lang-switcher">
+          <select onchange="if(this.value)window.location.href=this.value" aria-label="언어">
+            <option value="" selected disabled>한국어</option>
+            <option value="../content-moderation.html">English</option>
+            <option value="../ja/content-moderation.html">日本語</option>
+            <option value="content-moderation.html">한국어</option>
+            <option value="../fr/content-moderation.html">Français</option>
+            <option value="../es/content-moderation.html">Español</option>
+          </select>
+        </div>
+        <a href="index.html" class="back-link">홈으로</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>콘텐츠 정책</h1>
+      <p class="updated">최종 업데이트: 2026년 5월 9일</p>
+      <div class="notice">본 문서는 참고 번역입니다. 법적 효력은 <a href="../content-moderation.html">영문판</a>에만 있습니다.</div>
+
+      <p>DoCo는 모든 사용자에게 안전한 플랫폼을 유지하기 위해 노력합니다. 본 정책은 콘텐츠를 어떻게 검토하고 위반에 대응하는지 설명합니다.</p>
+
+      <h2>콘텐츠 신고</h2>
+      <p>사용자는 다음과 같은 방법으로 부적절한 콘텐츠를 신고할 수 있습니다:</p>
+      <ul>
+        <li><strong>게시물 신고:</strong> 게시물의 메뉴 아이콘 (•••)을 탭하고 "게시물 신고"를 선택</li>
+        <li><strong>사용자 신고:</strong> 사용자의 프로필에서 메뉴 아이콘을 탭하고 "사용자 신고"를 선택</li>
+      </ul>
+      <p>모든 신고는 기밀로 처리됩니다. 신고된 사용자에게는 누가 신고했는지 알려지지 않습니다.</p>
+
+      <h2>사용자 차단</h2>
+      <p>다른 사용자를 차단해 다음을 방지할 수 있습니다:</p>
+      <ul>
+        <li>지도에서 본인의 게시물이 보이는 것</li>
+        <li>본인의 프로필을 보는 것</li>
+        <li>본인을 팔로우하는 것</li>
+      </ul>
+      <p>사용자를 차단하려면 해당 프로필 메뉴에서 "사용자 차단"을 선택하세요. <strong>설정 &gt; 개인정보 및 안전 &gt; 차단된 사용자</strong>에서 차단된 사용자를 관리할 수 있습니다.</p>
+
+      <h2>검토 프로세스</h2>
+      <ol>
+        <li><strong>신고 접수:</strong> 사용자가 신고를 제출합니다</li>
+        <li><strong>1차 검토:</strong> 저희 팀이 24시간 이내에 신고를 검토합니다</li>
+        <li><strong>조치 시행:</strong> 검토 결과에 따라 적절한 조치를 취합니다</li>
+        <li><strong>통지:</strong> 신고한 사용자에게 결과를 통지합니다</li>
+      </ol>
+
+      <h2>콘텐츠 카테고리</h2>
+
+      <div class="category">
+        <div class="label"><span class="dot dot-red"></span>즉시 삭제</div>
+        <ul>
+          <li>아동 성 학대 자료 (CSAM)</li>
+          <li>테러 또는 폭력적 극단주의</li>
+          <li>폭력에 대한 직접적인 위협</li>
+          <li>비합의 성적 이미지</li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <div class="label"><span class="dot dot-orange"></span>24시간 내 검토</div>
+        <ul>
+          <li>혐오 발언 및 차별</li>
+          <li>괴롭힘 및 따돌림</li>
+          <li>나체 및 성적 콘텐츠</li>
+          <li>자해 및 자살 콘텐츠</li>
+          <li>지나치게 폭력적인 콘텐츠</li>
+          <li>스팸 및 사기</li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <div class="label"><span class="dot dot-yellow"></span>접수 순으로 검토</div>
+        <ul>
+          <li>잘못된 정보</li>
+          <li>사칭</li>
+          <li>지적 재산권 침해</li>
+          <li>기타 정책 위반</li>
+        </ul>
+      </div>
+
+      <h2>처분</h2>
+      <p>위반의 심각성과 빈도에 따라 다음과 같은 조치를 취할 수 있습니다:</p>
+      <ul>
+        <li><strong>경고:</strong> 첫 번째 경미한 위반에는 경고를 받습니다</li>
+        <li><strong>콘텐츠 삭제:</strong> 위반 콘텐츠가 플랫폼에서 삭제됩니다</li>
+        <li><strong>일시 정지:</strong> 계정이 일시적으로 비활성화됩니다 (1~30일)</li>
+        <li><strong>영구 정지:</strong> 심각하거나 반복되는 위반에 대해 계정이 영구 종료됩니다</li>
+      </ul>
+      <p>사용자는 지원팀에 연락해 처분에 대해 이의를 제기할 수 있습니다.</p>
+
+      <h2>이의 제기</h2>
+      <p>본인의 콘텐츠가 잘못 삭제되었거나 계정이 부당하게 정지되었다고 생각되는 경우, 설정의 <a href="support.html">지원</a> 기능을 이용하거나 <a href="mailto:docoappdirect@gmail.com">docoappdirect@gmail.com</a>으로 이메일을 보내주세요. 이의 제기는 48시간 이내에 검토됩니다.</p>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <span class="copyright">© 2026 DoCo</span>
+        <div class="footer-links">
+          <a href="privacy-policy.html">개인정보 처리방침</a>
+          <a href="terms-of-service.html">이용약관</a>
+          <a href="community-guidelines.html">커뮤니티 가이드라인</a>
+          <a href="content-moderation.html">콘텐츠 정책</a>
+          <a href="support.html">지원</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

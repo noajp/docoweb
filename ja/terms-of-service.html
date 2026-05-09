@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用規約 - DoCo</title>
+    <link rel="alternate" hreflang="en" href="https://noajp.github.io/docoweb/terms-of-service.html">
+    <link rel="alternate" hreflang="ja" href="https://noajp.github.io/docoweb/ja/terms-of-service.html">
+    <link rel="alternate" hreflang="ko" href="https://noajp.github.io/docoweb/ko/terms-of-service.html">
+    <link rel="alternate" hreflang="fr" href="https://noajp.github.io/docoweb/fr/terms-of-service.html">
+    <link rel="alternate" hreflang="es" href="https://noajp.github.io/docoweb/es/terms-of-service.html">
+    <link rel="alternate" hreflang="x-default" href="https://noajp.github.io/docoweb/terms-of-service.html">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Yu Gothic', sans-serif; background-color: #000; color: #fff; line-height: 1.7; }
+      header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid #1a1a1a; }
+      .logo { font-size: 1.8rem; font-weight: 700; color: #fff; text-decoration: none; }
+      .header-actions { display: flex; gap: 12px; align-items: center; }
+      .lang-switcher { position: relative; display: inline-flex; align-items: center; }
+      .lang-switcher select { appearance: none; -webkit-appearance: none; background-color: #1a1a1a; color: #fff; border: 1px solid #2a2a2a; border-radius: 50px; padding: 10px 36px 10px 36px; font-size: 0.9rem; font-family: inherit; cursor: pointer; transition: background-color 0.2s; }
+      .lang-switcher select:hover { background-color: #2a2a2a; }
+      .lang-switcher::before { content: "\1F310"; position: absolute; left: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 0.85rem; }
+      .lang-switcher::after { content: "\25BC"; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 0.65rem; color: #888; }
+      .back-link { padding: 10px 20px; background-color: #1a1a1a; color: #fff; text-decoration: none; border-radius: 50px; font-size: 0.9rem; transition: background-color 0.2s; }
+      .back-link:hover { background-color: #333; }
+      .container { max-width: 800px; margin: 0 auto; padding: 40px 60px 80px; }
+      h1 { font-size: 2.5rem; margin-bottom: 10px; }
+      .updated { color: #888; margin-bottom: 30px; font-size: 0.95rem; }
+      .notice { background-color: #0d0d0d; border: 1px solid #1f1f1f; border-radius: 8px; padding: 14px 18px; margin-bottom: 30px; color: #aaa; font-size: 0.9rem; }
+      h2 { font-size: 1.4rem; margin-top: 35px; margin-bottom: 12px; color: #fff; }
+      p, ul { margin-bottom: 15px; color: #ddd; }
+      ul { margin-left: 20px; }
+      li { margin-bottom: 6px; }
+      a { color: #4a9eff; }
+      strong { color: #fff; }
+      footer { padding: 30px 40px; border-top: 1px solid #222; margin-top: 60px; }
+      .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; max-width: 1400px; margin: 0 auto; gap: 20px; }
+      .copyright { color: #888; font-size: 0.9rem; }
+      .footer-links { display: flex; gap: 25px; flex-wrap: wrap; }
+      .footer-links a { color: #888; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+      .footer-links a:hover { color: #fff; }
+      @media (max-width: 640px) {
+        header { padding: 15px 20px; flex-wrap: wrap; gap: 10px; }
+        .logo { font-size: 1.4rem; }
+        h1 { font-size: 2rem; }
+        h2 { font-size: 1.2rem; }
+        .container { padding: 30px 20px 60px; }
+        .footer-content { flex-direction: column; text-align: center; }
+        .footer-links { justify-content: center; }
+        .lang-switcher select { padding: 8px 30px 8px 32px; font-size: 0.85rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">DoCo</a>
+      <div class="header-actions">
+        <div class="lang-switcher">
+          <select onchange="if(this.value)window.location.href=this.value" aria-label="言語">
+            <option value="" selected disabled>日本語</option>
+            <option value="../terms-of-service.html">English</option>
+            <option value="terms-of-service.html">日本語</option>
+            <option value="../ko/terms-of-service.html">한국어</option>
+            <option value="../fr/terms-of-service.html">Français</option>
+            <option value="../es/terms-of-service.html">Español</option>
+          </select>
+        </div>
+        <a href="index.html" class="back-link">トップへ戻る</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>利用規約</h1>
+      <p class="updated">最終更新日: 2026年5月9日</p>
+      <div class="notice">本書は参考訳です。法的拘束力を持つのは <a href="../terms-of-service.html">英語版</a> のみとなります。</div>
+
+      <h2>1. 規約への同意</h2>
+      <p>DoCo(以下「本アプリ」)をダウンロード、インストール、または使用することにより、お客様は本利用規約に同意したものとみなされます。本規約に同意しない場合、本アプリを使用しないでください。</p>
+
+      <h2>2. 利用資格</h2>
+      <p>DoCoの利用には17歳以上であることが必要です。本アプリを使用することにより、お客様はこの年齢要件を満たしていることを表明し保証するものとします。</p>
+
+      <h2>3. ユーザーアカウント</h2>
+      <p>お客様は、ご自身のアカウント認証情報の機密保持に責任を負います。正確な情報を提供し、必要に応じて更新することに同意するものとします。お客様のアカウントで発生するすべての活動について、お客様が単独で責任を負います。</p>
+
+      <h2>4. ユーザー生成コンテンツ</h2>
+      <p>DoCoに投稿したコンテンツの所有権はお客様に帰属します。ただし、コンテンツを投稿することにより、お客様はDoCoに対し、本アプリ内でそのコンテンツを使用、表示、配信するための非独占的・全世界的・無償のライセンスを付与するものとします。</p>
+      <p>以下のコンテンツを投稿しないことに同意します:</p>
+      <ul>
+        <li>違法、有害、脅迫的、悪意のある、または嫌がらせとなるコンテンツ</li>
+        <li>人種、民族、宗教、性別、性的指向、障害、または出身国に基づく差別やヘイトスピーチを含むコンテンツ</li>
+        <li>ヌード、性的なコンテンツ、またはポルノ</li>
+        <li>暴力、自傷行為、危険行為を助長するコンテンツ</li>
+        <li>知的財産権を侵害するコンテンツ</li>
+        <li>スパム、詐欺、または誤解を招く情報</li>
+        <li>適用される法律または規制に違反するコンテンツ</li>
+      </ul>
+
+      <h2>5. コンテンツのモデレーション</h2>
+      <p>DoCoは、本規約または<a href="community-guidelines.html">コミュニティガイドライン</a>に違反するコンテンツを削除する権利を留保します。ユーザーは不適切なコンテンツを通報でき、当社は24時間以内にレビューします。他のユーザーをブロックして、望まないやり取りを防ぐこともできます。詳細は<a href="content-moderation.html">モデレーションポリシー</a>をご参照ください。</p>
+
+      <h2>6. 禁止行為</h2>
+      <p>以下の行為を禁止します:</p>
+      <ul>
+        <li>個人または団体になりすますこと</li>
+        <li>本アプリを違法な目的で使用すること</li>
+        <li>本アプリまたはそのシステムへの不正アクセスを試みること</li>
+        <li>本アプリの正常な機能を妨害すること</li>
+        <li>同意なくユーザーデータを収集または取得すること</li>
+        <li>自動化されたシステムを使用して本アプリと相互作用すること</li>
+      </ul>
+
+      <h2>7. アカウントの終了</h2>
+      <p>本規約に違反した場合、当社はいつでもお客様のアカウントを停止または終了することができます。お客様はアプリの設定(設定 &gt; アカウント設定 &gt; アカウントを削除)からいつでもアカウントを削除できます。終了後、本アプリの利用権は直ちに失効します。</p>
+
+      <h2>8. 保証の否認</h2>
+      <p>DoCoは「現状のまま」提供され、いかなる種類の保証もありません。本アプリが中断されないこと、安全であること、またはエラーがないことを保証するものではありません。</p>
+
+      <h2>9. 責任の制限</h2>
+      <p>適用法で許される最大限の範囲において、DoCoはお客様の本アプリの使用に起因する間接的、付随的、特別、結果的、または懲罰的損害について一切責任を負わないものとします。</p>
+
+      <h2>10. 規約の変更</h2>
+      <p>当社は本規約を随時更新することがあります。変更後も本アプリを継続して使用することは、新しい規約への同意を構成するものとします。重要な変更については、本アプリを通じてユーザーに通知します。</p>
+
+      <h2>11. お問い合わせ</h2>
+      <p>本規約に関するご質問は、設定内のサポート機能、または <a href="mailto:docoappdirect@gmail.com">docoappdirect@gmail.com</a> までご連絡ください。</p>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <span class="copyright">© 2026 DoCo</span>
+        <div class="footer-links">
+          <a href="privacy-policy.html">プライバシーポリシー</a>
+          <a href="terms-of-service.html">利用規約</a>
+          <a href="community-guidelines.html">コミュニティガイドライン</a>
+          <a href="content-moderation.html">モデレーションポリシー</a>
+          <a href="support.html">サポート</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

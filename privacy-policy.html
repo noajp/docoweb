@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - DoCo</title>
+    <link rel="alternate" hreflang="en" href="https://noajp.github.io/docoweb/privacy-policy.html">
+    <link rel="alternate" hreflang="ja" href="https://noajp.github.io/docoweb/ja/privacy-policy.html">
+    <link rel="alternate" hreflang="ko" href="https://noajp.github.io/docoweb/ko/privacy-policy.html">
+    <link rel="alternate" hreflang="fr" href="https://noajp.github.io/docoweb/fr/privacy-policy.html">
+    <link rel="alternate" hreflang="es" href="https://noajp.github.io/docoweb/es/privacy-policy.html">
+    <link rel="alternate" hreflang="x-default" href="https://noajp.github.io/docoweb/privacy-policy.html">
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body {
@@ -35,6 +41,12 @@
         transition: background-color 0.2s;
       }
       .back-link:hover { background-color: #333; }
+      .header-actions { display: flex; gap: 12px; align-items: center; }
+      .lang-switcher { position: relative; display: inline-flex; align-items: center; }
+      .lang-switcher select { appearance: none; -webkit-appearance: none; background-color: #1a1a1a; color: #fff; border: 1px solid #2a2a2a; border-radius: 50px; padding: 10px 36px 10px 36px; font-size: 0.9rem; font-family: inherit; cursor: pointer; transition: background-color 0.2s; }
+      .lang-switcher select:hover { background-color: #2a2a2a; }
+      .lang-switcher::before { content: "\1F310"; position: absolute; left: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 0.85rem; }
+      .lang-switcher::after { content: "\25BC"; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 0.65rem; color: #888; }
       .container {
         max-width: 800px;
         margin: 0 auto;
@@ -97,7 +109,19 @@
   <body>
     <header>
       <a href="index.html" class="logo">DoCo</a>
-      <a href="index.html" class="back-link">Back to Home</a>
+      <div class="header-actions">
+        <div class="lang-switcher">
+          <select onchange="if(this.value)window.location.href=this.value" aria-label="Language">
+            <option value="" selected disabled>English</option>
+            <option value="privacy-policy.html">English</option>
+            <option value="ja/privacy-policy.html">日本語</option>
+            <option value="ko/privacy-policy.html">한국어</option>
+            <option value="fr/privacy-policy.html">Français</option>
+            <option value="es/privacy-policy.html">Español</option>
+          </select>
+        </div>
+        <a href="index.html" class="back-link">Back to Home</a>
+      </div>
     </header>
 
     <main class="container">

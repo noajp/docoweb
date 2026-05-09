@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normas de la comunidad - DoCo</title>
+    <link rel="alternate" hreflang="en" href="https://noajp.github.io/docoweb/community-guidelines.html">
+    <link rel="alternate" hreflang="ja" href="https://noajp.github.io/docoweb/ja/community-guidelines.html">
+    <link rel="alternate" hreflang="ko" href="https://noajp.github.io/docoweb/ko/community-guidelines.html">
+    <link rel="alternate" hreflang="fr" href="https://noajp.github.io/docoweb/fr/community-guidelines.html">
+    <link rel="alternate" hreflang="es" href="https://noajp.github.io/docoweb/es/community-guidelines.html">
+    <link rel="alternate" hreflang="x-default" href="https://noajp.github.io/docoweb/community-guidelines.html">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; background-color: #000; color: #fff; line-height: 1.7; }
+      header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid #1a1a1a; }
+      .logo { font-size: 1.8rem; font-weight: 700; color: #fff; text-decoration: none; }
+      .header-actions { display: flex; gap: 12px; align-items: center; }
+      .lang-switcher { position: relative; display: inline-flex; align-items: center; }
+      .lang-switcher select { appearance: none; -webkit-appearance: none; background-color: #1a1a1a; color: #fff; border: 1px solid #2a2a2a; border-radius: 50px; padding: 10px 36px 10px 36px; font-size: 0.9rem; font-family: inherit; cursor: pointer; transition: background-color 0.2s; }
+      .lang-switcher select:hover { background-color: #2a2a2a; }
+      .lang-switcher::before { content: "\1F310"; position: absolute; left: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 0.85rem; }
+      .lang-switcher::after { content: "\25BC"; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 0.65rem; color: #888; }
+      .back-link { padding: 10px 20px; background-color: #1a1a1a; color: #fff; text-decoration: none; border-radius: 50px; font-size: 0.9rem; transition: background-color 0.2s; }
+      .back-link:hover { background-color: #333; }
+      .container { max-width: 800px; margin: 0 auto; padding: 40px 60px 80px; }
+      h1 { font-size: 2.5rem; margin-bottom: 10px; }
+      .updated { color: #888; margin-bottom: 30px; font-size: 0.95rem; }
+      .notice { background-color: #0d0d0d; border: 1px solid #1f1f1f; border-radius: 8px; padding: 14px 18px; margin-bottom: 30px; color: #aaa; font-size: 0.9rem; }
+      .intro { color: #ccc; margin-bottom: 30px; }
+      .guideline-card { background-color: #0d0d0d; border: 1px solid #1f1f1f; border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+      .guideline-card h2 { font-size: 1.3rem; margin-bottom: 14px; color: #fff; display: flex; align-items: center; gap: 10px; }
+      .guideline-card .icon { font-size: 1.4rem; }
+      .guideline-card ul { margin-left: 20px; }
+      .guideline-card li { color: #bbb; margin-bottom: 6px; }
+      h3 { font-size: 1.3rem; margin-top: 40px; margin-bottom: 12px; color: #fff; }
+      p { color: #ddd; margin-bottom: 15px; }
+      ul { margin-left: 20px; margin-bottom: 15px; color: #ddd; }
+      li { margin-bottom: 6px; }
+      a { color: #4a9eff; }
+      strong { color: #fff; }
+      footer { padding: 30px 40px; border-top: 1px solid #222; margin-top: 60px; }
+      .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; max-width: 1400px; margin: 0 auto; gap: 20px; }
+      .copyright { color: #888; font-size: 0.9rem; }
+      .footer-links { display: flex; gap: 25px; flex-wrap: wrap; }
+      .footer-links a { color: #888; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+      .footer-links a:hover { color: #fff; }
+      @media (max-width: 640px) {
+        header { padding: 15px 20px; flex-wrap: wrap; gap: 10px; }
+        .logo { font-size: 1.4rem; }
+        h1 { font-size: 2rem; }
+        h3 { font-size: 1.1rem; }
+        .container { padding: 30px 20px 60px; }
+        .guideline-card { padding: 18px; }
+        .guideline-card h2 { font-size: 1.1rem; }
+        .footer-content { flex-direction: column; text-align: center; }
+        .footer-links { justify-content: center; }
+        .lang-switcher select { padding: 8px 30px 8px 32px; font-size: 0.85rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">DoCo</a>
+      <div class="header-actions">
+        <div class="lang-switcher">
+          <select onchange="if(this.value)window.location.href=this.value" aria-label="Idioma">
+            <option value="" selected disabled>Español</option>
+            <option value="../community-guidelines.html">English</option>
+            <option value="../ja/community-guidelines.html">日本語</option>
+            <option value="../ko/community-guidelines.html">한국어</option>
+            <option value="../fr/community-guidelines.html">Français</option>
+            <option value="community-guidelines.html">Español</option>
+          </select>
+        </div>
+        <a href="index.html" class="back-link">Volver al inicio</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Normas de la comunidad</h1>
+      <p class="updated">Última actualización: 9 de mayo de 2026</p>
+      <div class="notice">Este documento es una traducción de referencia. Solo la <a href="../community-guidelines.html">versión en inglés</a> tiene validez legal.</div>
+
+      <p class="intro">DoCo es una plataforma social basada en mapas que conecta a las personas a través de lugares y experiencias compartidos. Estas normas ayudan a garantizar una comunidad segura y acogedora para todos.</p>
+
+      <div class="guideline-card">
+        <h2><span class="icon">❤️</span> Sé respetuoso</h2>
+        <ul>
+          <li>Trata a los demás con amabilidad y respeto</li>
+          <li>Acepta la diversidad y las distintas perspectivas</li>
+          <li>Participa en conversaciones constructivas</li>
+          <li>Respeta la privacidad y los límites personales de los demás</li>
+        </ul>
+      </div>
+
+      <div class="guideline-card">
+        <h2><span class="icon">✋</span> Sin acoso ni intimidación</h2>
+        <ul>
+          <li>No tengas como objetivo, intimides ni amenaces a otros</li>
+          <li>Sin acecho ni contactos repetidos no deseados</li>
+          <li>No compartas información personal de otros sin consentimiento</li>
+          <li>Denuncia el comportamiento abusivo de inmediato</li>
+        </ul>
+      </div>
+
+      <div class="guideline-card">
+        <h2><span class="icon">🛡️</span> Sin discurso de odio</h2>
+        <ul>
+          <li>Sin contenido que promueva el odio basado en raza, etnia, religión, género, orientación sexual, discapacidad u origen nacional</li>
+          <li>Sin símbolos o imágenes asociados con grupos de odio</li>
+          <li>Sin lenguaje deshumanizante ni estereotipos</li>
+        </ul>
+      </div>
+
+      <div class="guideline-card">
+        <h2><span class="icon">🚫</span> Sin contenido inapropiado</h2>
+        <ul>
+          <li>Sin desnudez ni contenido sexualmente explícito</li>
+          <li>Sin violencia gráfica ni contenido sangriento</li>
+          <li>Sin contenido que promueva la autolesión o el suicidio</li>
+          <li>Sin contenido que represente o promueva actividades ilegales</li>
+        </ul>
+      </div>
+
+      <div class="guideline-card">
+        <h2><span class="icon">✅</span> Sé auténtico</h2>
+        <ul>
+          <li>No te hagas pasar por otros ni crees perfiles engañosos</li>
+          <li>Comparte experiencias genuinas y contenido auténtico</li>
+          <li>No difundas información errónea ni noticias falsas</li>
+          <li>No utilices la plataforma para spam o solicitaciones comerciales</li>
+        </ul>
+      </div>
+
+      <div class="guideline-card">
+        <h2><span class="icon">📍</span> Respeta la privacidad de la ubicación</h2>
+        <ul>
+          <li>No compartas la ubicación exacta de residencias privadas sin permiso</li>
+          <li>Ten cuidado al publicar sobre lugares sensibles</li>
+          <li>No utilices las funciones de ubicación para rastrear o vigilar a otros</li>
+        </ul>
+      </div>
+
+      <h3>Denunciar infracciones</h3>
+      <p>Si ves contenido que infringe estas normas, denúncialo usando el botón de denuncia disponible en cualquier publicación o perfil de usuario. Nuestro equipo revisa todas las denuncias en un plazo de 24 horas. También puedes bloquear a otros usuarios para evitar interacciones. Consulta nuestra <a href="content-moderation.html">Política de moderación</a> para más detalles.</p>
+
+      <h3>Aplicación</h3>
+      <p>Las infracciones de estas normas pueden resultar en:</p>
+      <ul>
+        <li>Eliminación de contenido</li>
+        <li>Suspensión temporal de la cuenta</li>
+        <li>Prohibición permanente de la cuenta</li>
+      </ul>
+      <p>La severidad de la aplicación depende de la naturaleza y frecuencia de las infracciones.</p>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <span class="copyright">© 2026 DoCo</span>
+        <div class="footer-links">
+          <a href="privacy-policy.html">Política de privacidad</a>
+          <a href="terms-of-service.html">Términos del servicio</a>
+          <a href="community-guidelines.html">Normas de la comunidad</a>
+          <a href="content-moderation.html">Política de moderación</a>
+          <a href="support.html">Soporte</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

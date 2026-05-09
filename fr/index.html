@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoCo - Libérez-vous de la timeline, élargissez votre monde</title>
+    <link rel="alternate" hreflang="en" href="https://noajp.github.io/docoweb/index.html">
+    <link rel="alternate" hreflang="ja" href="https://noajp.github.io/docoweb/ja/index.html">
+    <link rel="alternate" hreflang="ko" href="https://noajp.github.io/docoweb/ko/index.html">
+    <link rel="alternate" hreflang="fr" href="https://noajp.github.io/docoweb/fr/index.html">
+    <link rel="alternate" hreflang="es" href="https://noajp.github.io/docoweb/es/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://noajp.github.io/docoweb/index.html">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; background-color: #000; min-height: 100vh; color: #fff; overflow-x: hidden; }
+      .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+      header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; }
+      .logo { font-size: 1.8rem; font-weight: 700; color: #fff; text-decoration: none; }
+      .nav-buttons { display: flex; gap: 12px; align-items: center; }
+      .lang-switcher { position: relative; display: inline-flex; align-items: center; }
+      .lang-switcher select { appearance: none; -webkit-appearance: none; background-color: #1a1a1a; color: #fff; border: 1px solid #2a2a2a; border-radius: 50px; padding: 10px 36px 10px 36px; font-size: 0.9rem; font-family: inherit; cursor: pointer; transition: background-color 0.2s; }
+      .lang-switcher select:hover { background-color: #2a2a2a; }
+      .lang-switcher::before { content: "\1F310"; position: absolute; left: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 0.85rem; }
+      .lang-switcher::after { content: "\25BC"; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 0.65rem; color: #888; }
+      .nav-btn { padding: 12px 24px; border-radius: 50px; font-size: 0.95rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+      .nav-btn-light { background-color: #fff; color: #000; border: none; }
+      .nav-btn-light:hover { background-color: #e0e0e0; }
+      .main-content { display: flex; justify-content: space-between; align-items: center; padding: 60px 40px 80px; min-height: calc(100vh - 200px); }
+      .text-content { flex: 1; max-width: 600px; }
+      .main-title { font-size: 4.5rem; font-weight: 700; line-height: 1.1; margin-bottom: 40px; }
+      .features-list { list-style: none; margin-bottom: 30px; }
+      .section-title { font-size: 2.2rem; font-weight: 700; line-height: 1.2; margin-bottom: 20px; }
+      .two-column-section { display: flex; gap: 60px; padding: 60px 40px; }
+      .column { flex: 1; display: flex; flex-direction: column; }
+      .column-left { align-items: flex-start; text-align: left; }
+      .column-right { align-items: flex-end; text-align: right; }
+      .column .text-content { max-width: 100%; margin-bottom: 30px; }
+      .column-image { width: 100%; max-width: 450px; height: auto; aspect-ratio: 1; border-radius: 20px; object-fit: cover; box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1); }
+      .features-list li { font-size: 2rem; font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 15px; }
+      .feature-emoji { font-size: 2rem; }
+      .description { font-size: 1.1rem; line-height: 1.6; color: #fff; margin-bottom: 30px; }
+      .cta-btn { display: inline-block; background-color: #fff; color: #000; padding: 16px 32px; border-radius: 50px; font-size: 1.1rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+      .cta-btn:hover { background-color: #e0e0e0; transform: scale(1.02); }
+      .phone-mockup { flex: 1; display: flex; justify-content: center; align-items: center; }
+      .phone-frame { width: 320px; height: 650px; background: #1a1a1a; border-radius: 45px; padding: 12px; box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5); }
+      .phone-screen { width: 100%; height: 100%; background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%); border-radius: 35px; overflow: hidden; position: relative; }
+      .app-screenshot { width: 100%; height: 100%; object-fit: cover; border-radius: 35px; }
+      footer { padding: 30px 40px; border-top: 1px solid #222; }
+      .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+      .footer-left { display: flex; align-items: center; gap: 30px; }
+      .copyright { color: #888; font-size: 0.9rem; }
+      .footer-links { display: flex; gap: 25px; flex-wrap: wrap; }
+      .footer-links a { color: #888; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+      .footer-links a:hover { color: #fff; }
+      @media (max-width: 1024px) {
+        .main-content { flex-direction: column; text-align: center; padding: 40px 20px; }
+        .text-content { margin-bottom: 50px; }
+        .main-title { font-size: 3rem; }
+        .features-list li { justify-content: center; font-size: 1.5rem; }
+        .description { margin-left: auto; margin-right: auto; }
+        .phone-frame { width: 280px; height: 570px; }
+        .two-column-section { flex-direction: column; gap: 60px; padding: 40px 20px; }
+        .column-left, .column-right { align-items: center; text-align: center; }
+        .column-image { max-width: 400px; }
+        .section-title { font-size: 1.8rem; }
+      }
+      @media (max-width: 640px) {
+        header { padding: 15px 20px; }
+        .logo { font-size: 1.4rem; }
+        .nav-btn { padding: 10px 18px; font-size: 0.85rem; }
+        .main-title { font-size: 2.2rem; }
+        .features-list li { font-size: 1.2rem; }
+        .section-title { font-size: 1.6rem; word-wrap: break-word; overflow-wrap: break-word; }
+        .container { padding: 0 20px; }
+        .two-column-section { padding: 40px 20px; gap: 50px; }
+        .footer-content { flex-direction: column; text-align: center; }
+        .footer-left { flex-direction: column; }
+        .footer-links { justify-content: center; }
+        .column-image { max-width: 100%; width: 100%; }
+        .description { font-size: 1rem; }
+        .lang-switcher select { padding: 8px 30px 8px 32px; font-size: 0.85rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">DoCo</a>
+      <div class="nav-buttons">
+        <div class="lang-switcher">
+          <select onchange="if(this.value)window.location.href=this.value" aria-label="Langue">
+            <option value="" selected disabled>Français</option>
+            <option value="../index.html">English</option>
+            <option value="../ja/index.html">日本語</option>
+            <option value="../ko/index.html">한국어</option>
+            <option value="index.html">Français</option>
+            <option value="../es/index.html">Español</option>
+          </select>
+        </div>
+        <a href="#" class="nav-btn nav-btn-light">Télécharger l'app</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="main-content">
+        <div class="text-content">
+          <h1 class="main-title">Libérez-vous de la timeline,<br>élargissez votre monde</h1>
+          <ul class="features-list">
+            <li><span class="feature-emoji">🌍</span> Découvrez de nouveaux lieux</li>
+            <li><span class="feature-emoji">📍</span> Partagez votre position</li>
+          </ul>
+          <p class="description">
+            Découvrez des lieux incroyables autour de vous et partagez vos aventures avec vos amis. Avec DoCo, explorer le monde devient simple et amusant.
+          </p>
+          <a href="#" class="cta-btn">Télécharger l'app</a>
+        </div>
+        <div class="phone-mockup">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <img src="../Simulator Screenshot - iPhone 17 - 2026-01-05 at 22.55.27.png" alt="Capture d'écran de l'app DoCo" class="app-screenshot">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="two-column-section">
+        <div class="column column-left">
+          <img src="../IMG_0730.jpg" alt="Capture d'écran 2 de l'app DoCo" class="column-image">
+          <div class="text-content">
+            <h2 class="section-title">Posez vos pensées sur la carte</h2>
+            <p class="description">
+              Partagez ce que vous avez en tête, où que vous soyez. Publiez des messages directement sur la carte 3D et découvrez en temps réel ce que les autres disent autour de vous.
+            </p>
+          </div>
+        </div>
+
+        <div class="column column-right">
+          <div class="text-content">
+            <h2 class="section-title">Partagez de superbes photos dans des lieux incroyables&nbsp;!</h2>
+            <p class="description">
+              Stimulez votre créativité et élargissez votre monde&nbsp;!
+            </p>
+          </div>
+          <img src="../IMG_0734.jpg" alt="Capture d'écran 3 de l'app DoCo" class="column-image">
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">
+          <span class="copyright">© 2026 DoCo</span>
+        </div>
+        <div class="footer-links">
+          <a href="privacy-policy.html">Politique de confidentialité</a>
+          <a href="terms-of-service.html">Conditions d'utilisation</a>
+          <a href="community-guidelines.html">Règles de la communauté</a>
+          <a href="content-moderation.html">Politique de modération</a>
+          <a href="support.html">Support</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
