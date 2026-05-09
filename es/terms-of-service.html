@@ -17,9 +17,9 @@
       .logo { font-size: 1.8rem; font-weight: 700; color: #fff; text-decoration: none; }
       .header-actions { display: flex; gap: 12px; align-items: center; }
       .lang-switcher { position: relative; display: inline-flex; align-items: center; }
-      .lang-switcher select { appearance: none; -webkit-appearance: none; background-color: #1a1a1a; color: #fff; border: 1px solid #2a2a2a; border-radius: 50px; padding: 10px 36px 10px 36px; font-size: 0.9rem; font-family: inherit; cursor: pointer; transition: background-color 0.2s; }
+      .lang-switcher select { appearance: none; -webkit-appearance: none; background-color: #1a1a1a; color: #fff; border: 1px solid #2a2a2a; border-radius: 50px; padding: 10px 36px 10px 36px; min-width: 150px; font-size: 0.9rem; font-family: inherit; cursor: pointer; transition: background-color 0.2s; }
       .lang-switcher select:hover { background-color: #2a2a2a; }
-      .lang-switcher::before { content: "\1F310"; position: absolute; left: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 0.85rem; }
+      .lang-switcher::before { content: "\1F30F"; position: absolute; left: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 0.85rem; }
       .lang-switcher::after { content: "\25BC"; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 0.65rem; color: #888; }
       .back-link { padding: 10px 20px; background-color: #1a1a1a; color: #fff; text-decoration: none; border-radius: 50px; font-size: 0.9rem; transition: background-color 0.2s; }
       .back-link:hover { background-color: #333; }
@@ -47,7 +47,7 @@
         .container { padding: 30px 20px 60px; }
         .footer-content { flex-direction: column; text-align: center; }
         .footer-links { justify-content: center; }
-        .lang-switcher select { padding: 8px 30px 8px 32px; font-size: 0.85rem; }
+        .lang-switcher select { padding: 8px 30px 8px 32px; font-size: 0.85rem; min-width: 130px; }
       }
     </style>
   </head>
